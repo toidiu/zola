@@ -60,6 +60,8 @@ pub struct SectionFrontMatter {
     pub page_template: Option<String>,
     /// Any extra parameter present in the front matter
     pub extra: HashMap<String, Value>,
+    /// Continue Reading Text
+    pub continue_reading_text: Option<String>,
 }
 
 impl SectionFrontMatter {
@@ -98,6 +100,7 @@ impl Default for SectionFrontMatter {
             transparent: false,
             page_template: None,
             extra: HashMap::new(),
+            continue_reading_text: None,
         }
     }
 }

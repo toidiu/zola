@@ -51,6 +51,8 @@ pub struct PageFrontMatter {
     pub in_search_index: bool,
     /// Any extra parameter present in the front matter
     pub extra: Map<String, Value>,
+    /// Continue Reading Text
+    pub continue_reading_text: Option<String>,
 }
 
 impl PageFrontMatter {
@@ -131,6 +133,7 @@ impl Default for PageFrontMatter {
             in_search_index: true,
             template: None,
             extra: Map::new(),
+            continue_reading_text: None,
         }
     }
 }

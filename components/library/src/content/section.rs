@@ -154,6 +154,7 @@ impl Section {
             &self.permalink,
             permalinks,
             self.meta.insert_anchor_links,
+            &(self.meta.continue_reading_text.clone().unwrap_or("more".to_string())),
         );
 
         context.tera_context.insert("section", &SerializingSection::from_section_basic(self, None));
